@@ -1,0 +1,77 @@
+pipeline {
+    agent any
+    stages {
+        
+        stage('src-EDLAtidal ') {
+            
+            steps {
+                echo "src-EDLAtidal"
+                sleep 2
+                sh "pwd"
+                
+            }
+        }
+        
+        stage('REFINED to DEV') {
+          parallel {
+            stage('GMR') {
+              agent any
+              stages {
+                stage('IDQ') {
+                  steps {
+                    echo 'IDQ'
+                    sleep 10
+                    sh "pwd"
+                  }
+                }
+              }
+            }
+            stage('Non GMR'){
+                agent any
+              stages {
+                stage('Refined to dev non GMR') {
+                  steps {
+                    echo 'Refined to dev non GMR'
+                    sleep 20
+                    sh "pwd"
+                        }
+                    }
+                }
+            }
+            stage('yes GMR'){
+                agent any
+              stages {
+                stage('Refined to dev non GMR ues') {
+                  steps {
+                    echo 'Refined to dev non GMRoeus'
+                    sleep 20
+                    sh "pwd"
+                        }
+                    }
+                }
+            }
+            stage('NOne GMR'){
+                agent any
+              stages {
+                stage('Refined to dev non GMR ') {
+                  steps {
+                    echo 'Refined to dev non GMR yess'
+                    sleep 20
+                    sh "pwd"
+                        }
+                    }
+                }
+            }
+          }
+        }
+            stage('END to End') {
+            
+            steps {
+                echo 'END to End'
+                sleep 2
+                sh "pwd"
+                  }
+            }
+                
+    }
+}
