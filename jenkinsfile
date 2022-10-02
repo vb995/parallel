@@ -2,60 +2,60 @@ pipeline {
     agent any
     stages {
         
-        stage('src-EDLAtidal ') {
+        stage('sral ') {
             
             steps {
-                echo "src-EDLAtidal"
+                echo "src-al"
                 sleep 2
                 sh "pwd"
                 
             }
         }
         
-        stage('REFINED to DEV') {
+        stage('DEV') {
           parallel {
-            stage('GMR') {
+            stage('GMRfdfrrr') {
               agent any
               stages {
-                stage('IDQ') {
+                stage('IDrfrfrQ') {
                   steps {
-                    echo 'IDQ'
+                    echo 'IrfrfrfrgtghDQ'
                     sleep 10
                     sh "pwd"
                   }
                 }
               }
             }
-            stage('Non GMR'){
+            stage(' GtgtgtgthththMR'){
                 agent any
               stages {
-                stage('Refined to dev non GMR') {
+                stage('RththththtyhthMR') {
                   steps {
-                    echo 'Refined to dev non GMR'
+                    echo 'RefththththththR'
                     sleep 20
                     sh "pwd"
                         }
                     }
                 }
             }
-            stage('yes GMR'){
+            stage('yes GMgthththththR'){
                 agent any
               stages {
-                stage('Refined to dev non GMR ues') {
+                stage('Rehththththes') {
                   steps {
-                    echo 'Refined to dev non GMRoeus'
+                    echo 'Refinththththeus'
                     sleep 20
                     sh "pwd"
                         }
                     }
                 }
             }
-            stage('NOne GMR'){
+            stage('NOthththththR'){
                 agent any
               stages {
-                stage('Refined to dev non GMR ') {
+                stage('RefthththththMR ') {
                   steps {
-                    echo 'Refined to dev non GMR yess'
+                    echo 'Refhththththth
                     sleep 20
                     sh "pwd"
                         }
